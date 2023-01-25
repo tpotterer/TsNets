@@ -32,4 +32,8 @@ export class Model {
       params = layer.setParameters(params);
     });
   }
+
+  public getLayers(): AnyLayerType[] {
+    return this.layers;
+  }
 }
