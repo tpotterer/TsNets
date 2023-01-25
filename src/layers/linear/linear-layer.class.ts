@@ -3,8 +3,10 @@ import { Atom } from "../../shared/atom/atom.class";
 import { ModelModes } from "../../shared/model-modes.enum";
 import { LayerBase } from "../../shared/layer-base.class";
 import { AtomTensor } from "../../shared/atom-tensor.type";
+import { LayerTypes } from "../../shared/layer-types.enum";
 
 export class LinearLayer extends LayerBase {
+  public layerType: LayerTypes = LayerTypes.Linear;
   private neurons: Neuron[] = [];
   private dropoutMask: boolean[] = [];
 

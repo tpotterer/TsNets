@@ -2,8 +2,10 @@ import { Atom } from "../../shared/atom/atom.class";
 import { LayerBase } from "../../shared/layer-base.class";
 import { ModelModes } from "../../shared/model-modes.enum";
 import { AtomTensor } from "../../shared/atom-tensor.type";
+import { LayerTypes } from "../../shared/layer-types.enum";
 
 export class ConvLayer extends LayerBase {
+  public layerType: LayerTypes = LayerTypes.Conv;
   // (4d array)
   // (output channels, (3x3 kernel, (input channels, (kxk matrix))))
   private kernels: Atom[][][][] = [];

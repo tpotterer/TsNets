@@ -3,8 +3,10 @@ import { NonLinearityTypes } from "../../shared/non-linearity-types.enum";
 import { LayerBase } from "../../shared/layer-base.class";
 import { ModelModes } from "../../shared/model-modes.enum";
 import { AtomTensor } from "../../shared/atom-tensor.type";
+import { LayerTypes } from "../../shared/layer-types.enum";
 
 export class ThreeDNonLinearityLayer extends LayerBase {
+  public layerType: LayerTypes = LayerTypes.ThreeDNonLinearity;
   constructor(
     private nonLinearity: NonLinearityTypes = NonLinearityTypes.Tanh
   ) {
